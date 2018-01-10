@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+class Clock
+{
+	private:
+		static Clock* instance;
+		Clock(){
+			cout << "constructor" << endl;
+		};
+	public:
+		void getTime(){
+			cout << "hora" << endl;
+		}
+		static Clock* getInstance(){
+
+			if (instance == 0){
+				instance = new Clock;
+			}
+			return instance;
+		}
+};
+
+Clock* Clock :: instance = 0; //las instancias se inicializan afuera de la clase dentro del archivo de la clase. 
+
+int main (){
+	Clock* instance1 = Clock::getInstance();
+	instance1->getTime();
+	Clock* instance2 = Clock::getInstance();
+	instance2->getTime();
+
+	cout << instance1 << endl;
+	cout << instance2 << endl;
+}
