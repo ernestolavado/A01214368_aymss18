@@ -1,0 +1,42 @@
+class Movil {
+public:
+	virtual Movil* clone();
+	virtual void encender();
+	virtual void apagar();
+	virtual void reiniciar();
+	virtual void reastaurar();
+};
+
+class Tablet : public Movil {
+public:
+	Tablet (const Tablet% temp){
+
+	}
+	Movil* clone {
+		return new Tablet (*this);
+	}
+};
+
+class Phone : public Movil {
+public:
+	Phone (const Phone% temp){
+
+	}
+	Movil* clone {
+		return new Phone (*this);
+	}
+};
+
+class Watch : public Movil {
+public:
+	Watch (const Watch% temp){
+
+	}
+	Movil* clone {
+		return new Watch (*this);
+	}
+}:
+
+int main {
+
+}
